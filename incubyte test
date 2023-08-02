@@ -1,0 +1,24 @@
+def process_commands(spacecraft, commands):
+    for command in commands:
+        if command == "f":
+            move_forward(spacecraft)
+        elif command == "b":
+            move_backward(spacecraft)
+        elif command == "l":
+            turn_left(spacecraft)
+        elif command == "r":
+            turn_right(spacecraft)
+        elif command == "u":
+            turn_up(spacecraft)
+        elif command == "d":
+            turn_down(spacecraft)
+
+# Example commands
+commands = ["f", "r", "u", "b", "l"]
+
+# Process the commands and get the final position and direction
+process_commands(spacecraft, commands)
+
+# Print the final position and direction
+print("Final Position:", (spacecraft.x, spacecraft.y, spacecraft.z))
+print("Final Direction:", spacecraft.direction)
